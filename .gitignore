@@ -10,3 +10,6 @@ dist/
 *.egg-info/
 .env
 private-data/
+/test_env/runs/
+/test_env/latest_report.json
+/test_env/.report-*

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hse-python-downloads-sorter"
+version = "0.1.0"
+description = "Сортировщик загрузок с предварительным планом, историей и отменой"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+downloads-sorter = "downloads_sorter.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["downloads_sorter*"]
+
+[tool.setuptools.package-data]
+downloads_sorter = ["rules.json"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+extend-select = ["E501", "I"]
